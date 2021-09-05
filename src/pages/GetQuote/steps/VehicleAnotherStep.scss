@@ -1,0 +1,68 @@
+@import 'scss/basic';
+@import 'scss/mixin/media';
+
+.step-vehicleanother {
+  h4 {
+    line-height: 50px;
+    margin: 0;
+  }
+  .comment {
+    color: #4b4b4b;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .content {
+    width: 320px;
+    margin-top: 32px;
+  }
+  .options {
+    display: flex;
+    justify-content: space-between;
+  }
+  .btn-outline-blue {
+    width: 152px;
+    margin: 0;
+  }
+  .vehicle-list {
+    margin-top: 20px;
+    li {
+      display: flex;
+      border-radius: 4px;
+      padding: 26px 20px;
+      margin-bottom: 10px;
+      line-height: 1.2;
+    }
+    .number {
+      width: 23px;
+      flex-shrink: 0;
+      margin-right: 3px;
+    }
+    .vehicle-name {
+      color: #247fe8;
+      text-transform: uppercase;
+      font-weight: bold;
+      text-align: left;
+    }
+    .btn-delete {
+      margin-left: auto;
+      font-weight: 500;
+      font-size: 12px;
+      color: #4b4b4b;
+      text-decoration: underline;
+      &:hover {
+        color: #247fe8;
+      }
+    }
+  }
+}
+
+@include media-md {
+  .step-vehicleanother {
+    .vehicle-list {
+      li {
+        padding: 15px 20px;
+      }
+    }
+  }
+}

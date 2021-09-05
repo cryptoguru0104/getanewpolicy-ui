@@ -1,0 +1,162 @@
+@import '../../mixin/media';
+@import '../../mixin/appearance';
+@import '../../mixin/ie';
+
+.control {
+    display: flex;
+    position: relative;
+    width: 200px;
+    height: 60px;
+
+    input,
+    select,
+    textarea {
+        @include appearance;
+
+        margin: 0;
+        width: 100%;
+        border-radius: 4px;
+        background: #fff;
+        border: 1px solid #ccc;
+        padding: 20px 28px;
+        font-size: 16px;
+        line-height: 18px;
+        height: 100%;
+        color: #000;
+
+        @include media-sm {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+
+    textarea {
+        padding-right: 35px;
+    }
+
+    select {
+        option {
+            color: #000;
+            background: #fff;
+        }
+    }
+
+    .validation-icon {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: calc(50% - 15px);
+        right: 15px;
+        pointer-events: none;
+
+        use {
+            display: none;
+        }
+    }
+
+    @include ie {
+        .validation-icon {
+            display: none;
+        }
+
+        &::after {
+            content: '';
+            display: block;
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            right: 15px;
+            top: calc(50% - 15px);
+            background: no-repeat center center;
+            pointer-events: none;
+        }
+    }
+
+    &.has-error {
+        .validation-icon {
+            .times {
+                display: inline;
+            }
+        }
+
+        @include ie {
+            &::after {
+                // background-image: url('../../../images/validation-error.svg');
+            }
+        }
+    }
+
+    &.has-success {
+        .validation-icon {
+            .check {
+                display: inline;
+            }
+        }
+
+        @include ie {
+            &::after {
+                // background-image: url('../../../images/validation-success.svg');
+            }
+        }
+    }
+
+    &.has-warning {
+        .validation-icon {
+            .spinner {
+                display: inline;
+                transform-origin: 50% 50%;
+                animation: control-spin 1.5s linear;
+                animation-iteration-count: infinite;
+            }
+        }
+
+        @include ie {
+            &::after {
+                // background: url('../../../images/validation-warning.svg') no-repeat center;
+                transform-origin: 50% 50%;
+                animation: control-spin 1.5s linear;
+                animation-iteration-count: infinite;
+            }
+        }
+    }
+
+}
+
+.control.with-label {
+    height: 80px;
+    flex-direction: column;
+    align-items: stretch;
+
+    label {
+        display: block;
+        font-size: 16px;
+        height: 20px;
+        line-height: 20px;
+    }
+
+    input,
+    select,
+    textarea {
+        height: 60px;
+    }
+
+    @include ie {
+        &::after {
+            top: calc(10px + 50% - 15px);
+        }
+    }
+
+    .validation-icon {
+        /* extra 10px is label height */
+        top: calc(10px + 50% - 15px);
+    }
+}
+
+@keyframes control-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,403 @@
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ol {
+  margin: 0;
+}
+
+input, button {
+  outline: none;
+}
+
+p {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  cursor: pointer;
+}
+
+a {
+  color: #3F8FEB;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.container {
+  max-width: 980px;
+  padding: 0 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+button {
+  cursor: pointer;
+}
+
+html,
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  color: black;
+  margin: 0;
+  padding: 0;
+  line-height: 150%;
+}
+
+header {
+  background: #335ee0;
+  box-shadow: 0px 4px 12px -4px rgba(0, 0, 0, 0.11);
+}
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+}
+header .logo {
+  font-weight: bold;
+  font-size: 18px;
+}
+header a {
+  border: 1px solid #247fe8;
+  box-sizing: border-box;
+  border-radius: 4px;
+  width: 140px;
+  padding-left: 22px;
+  font-size: 14px;
+  line-height: 30px;
+  color: white;
+  text-decoration: none;
+  background: url("../images/arrow.svg") no-repeat right 10px center;
+  background-color: #40bd35;
+}
+
+.logo {
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: -0.5px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+main {
+  padding: 20px 0 40px 0;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 120%;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 46px;
+  line-height: 120%;
+  margin: 20px 0 40px 0;
+}
+
+.ads {
+  margin-top: 61px;
+}
+.ads ul {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: repeat(5, auto);
+  -moz-column-gap: 49px;
+       column-gap: 49px;
+}
+.ads ul li {
+  position: relative;
+}
+.ads .ads-seen-on {
+  position: absolute;
+  left: 0;
+  top: -21px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 150%;
+  color: #525252;
+  white-space: nowrap;
+}
+
+.saving {
+  max-width: 800px;
+  position: relative;
+}
+
+.saving-mobile {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid #eeeeee;
+  border-radius: 5px;
+  position: relative;
+  padding: 15px 20px;
+}
+.saving-mobile .saving-title {
+  left: 7px;
+  bottom: 3px;
+}
+
+.saving-title {
+  position: absolute;
+  left: 0;
+  bottom: -20px;
+  font-style: italic;
+  font-size: 13px;
+  line-height: 150%;
+  color: #979797;
+}
+
+.note {
+  background: #eeeeee;
+  border-left: 10px solid #335ee0;
+  padding: 15px 14px 15px 19px;
+  margin: 30px 0 40px 0;
+}
+
+ol {
+  padding-left: 1rem;
+  margin-top: 2rem;
+}
+
+form {
+  margin: 30px 0 40px 0;
+  max-width: 542px;
+  background: #eeeeee;
+  padding: 30px;
+}
+form label {
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  display: block;
+  font-size: 20px;
+  line-height: 112%;
+}
+form .control-group {
+  margin-top: 20px;
+  max-width: 400px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  border: 2px solid #335ee0;
+  box-sizing: border-box;
+  box-shadow: 0px 1px 1px rgba(255, 255, 255, 0.25), 0px 10px 11px -6px rgba(18, 76, 163, 0.54);
+  border-radius: 11px;
+  overflow: hidden;
+  background: #335ee0;
+}
+form input {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  border: 0;
+  width: 50%;
+  height: 100%;
+  padding-left: 50px;
+  background: white url("../images/location.svg") no-repeat 32px center;
+}
+form button {
+  height: 100%;
+  width: 50%;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  border: 0;
+  background: #335ee0;
+  color: white;
+}
+
+footer {
+  background: #292c30;
+  color: white;
+  padding: 32px 0 13px 0;
+}
+footer .logo {
+  font-size: 16px;
+  line-height: 19px;
+}
+footer nav ul {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  -moz-column-gap: 85px;
+       column-gap: 85px;
+  justify-content: center;
+}
+footer nav ul a {
+  font-size: 12px;
+  line-height: 14px;
+  color: #ffffff;
+  text-decoration: none;
+}
+footer hr {
+  border: 0;
+  border-top: 2px solid #979797;
+  margin: 30px 0;
+}
+footer .disclaimer {
+  font-size: 11px;
+  line-height: 13px;
+  color: #c4c4c4;
+}
+
+.section-featured {
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 992px) {
+  html,
+body {
+    font-size: 16px;
+  }
+
+  .container {
+    padding: 0 10px;
+  }
+
+  header .container {
+    height: 40px;
+  }
+  header .logo {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  header a {
+    width: 99px;
+    height: 24px;
+    font-size: 10px;
+    line-height: 24px;
+    padding-left: 9px;
+  }
+
+  main {
+    padding-top: 10px;
+  }
+
+  .description {
+    font-size: 11px;
+    line-height: 120%;
+  }
+
+  h1 {
+    font-size: 26px;
+    line-height: 120%;
+    margin: 20px 0 10px 0;
+  }
+
+  .ads {
+    margin-top: 25px;
+  }
+  .ads .ads-seen-on {
+    font-size: 10px;
+    top: -15px;
+  }
+  .ads ul {
+    -moz-column-gap: 25px;
+         column-gap: 25px;
+  }
+
+  .saving {
+    display: none;
+  }
+
+  .saving-mobile {
+    display: flex;
+  }
+  .saving-mobile img {
+    margin-bottom: 20px;
+  }
+
+  .note {
+    border-left-width: 4px;
+    padding: 10px 5px 6px 10px;
+  }
+
+  form {
+    padding: 15px 10px 18px 10px;
+  }
+  form label {
+    font-size: 14px;
+  }
+  form .control-group {
+    margin-top: 10px;
+    flex-direction: column;
+    background: none;
+    border: none;
+    box-shadow: none;
+    width: 100%;
+    max-width: none;
+    height: auto;
+  }
+  form input {
+    border: 2px solid #335ee0;
+    box-sizing: border-box;
+    box-shadow: 0px 1px 1px rgba(255, 255, 255, 0.25), 0px 10px 11px -6px rgba(18, 76, 163, 0.54);
+    border-radius: 10px;
+    font-size: 16px;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 20px;
+    padding-left: 40%;
+    background-position-x: calc(40% - 10px);
+  }
+  form button {
+    background: #335ee0;
+    border: 2px solid #335ee0;
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-size: 16px;
+    line-height: 112%;
+    width: 100%;
+    height: 50px;
+  }
+
+  footer .logo {
+    text-align: center;
+  }
+  footer nav ul {
+    -moz-column-gap: 25px;
+         column-gap: 25px;
+  }
+  footer nav ul a {
+    font-size: 10px;
+    line-height: 12px;
+  }
+  footer hr {
+    margin: 20px 0;
+  }
+  footer .disclaimer {
+    font-size: 10px;
+    line-height: 12px;
+  }
+}

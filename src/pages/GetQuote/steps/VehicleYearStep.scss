@@ -1,0 +1,32 @@
+@import 'scss/basic';
+@import 'scss/mixin/media';
+
+.step-vehicleyear {
+  .years-list {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(4, 160px);
+    column-gap: 15px;
+    row-gap: 10px;
+    margin-bottom: 10px;
+    .btn {
+      height: 58px;
+    }
+  }
+}
+
+@include media-md {
+  .step-vehicleyear {
+    .years-list {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      column-gap: 8px;
+      .btn {
+        height: 50px;
+      }
+    }
+    .Dropdown-root, .btn {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,88 @@
+@import "scss/basic";
+@import "scss/mixin/media";
+
+.secondlayout :global {
+  font-family: "Poppins", sans-serif;
+  width: 100vw;
+  a {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  button {
+    font-family: "Poppins", sans-serif;
+  }
+  .container {
+    max-width: 1448px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  h1 {
+    margin: 150px auto 13px auto;
+    max-width: 1028px;
+    font-weight: 600;
+    font-size: 72px;
+    line-height: 110%;
+    letter-spacing: -0.06em;
+    text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.25),
+      2px 3px 2px rgba(30, 30, 30, 0.06);
+  }
+  .subtext {
+    color: #494949;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 160%;
+    letter-spacing: -0.06em;
+    max-width: 617px;
+  }
+
+  h2 {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 72px;
+  }
+
+  .btn-primary {
+    background: #335ee0;
+    border-radius: 2.57884px;
+    width: 297.51px;
+    height: 53.21px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #ffffff;
+    border: 0;
+  }
+  @include media-md {
+    .container {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    h1 {
+      font-size: 30px;
+      line-height: 120%;
+      margin: 23px 12px 23px 12px;
+      letter-spacing: -0.02em;
+    }
+    .subtext {
+      font-size: 13px;
+      line-height: 160%;
+      font-weight: 500;
+      letter-spacing: 00.01em;
+    }
+    h2 {
+      font-size: 24px;
+      line-height: 140%;
+    }
+    .btn-primary {
+      width: 100% !important;
+      background: #335ee0;
+      box-shadow: 2px 8px 21px -3px rgba(6, 27, 90, 0.26) !important;
+      border-radius: 8px !important;
+      height: 49px !important;
+      font-size: 14px !important;
+    }
+  }
+}

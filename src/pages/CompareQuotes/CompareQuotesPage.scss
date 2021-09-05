@@ -1,0 +1,28 @@
+@import 'scss/mixin/media';
+.page-compare-quotes {
+  .block-progress .info {
+    display: none;
+  }
+
+  .form-step {
+    min-height: calc(var(--app-height) - 100px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+  }
+
+  .content {
+    min-height: 50vh;
+  }
+}
+@include media-md {
+  .page-compare-quotes {
+    .form-step {
+      min-height: calc(var(--app-height) - 95px);
+      display: block;
+      padding-top: 30px;
+    }
+  }
+}

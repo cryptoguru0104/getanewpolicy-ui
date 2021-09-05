@@ -1,0 +1,119 @@
+@import 'scss/mixin/media';
+.header :global{
+  background: linear-gradient(
+    0deg,
+    #ffffff 0.55%,
+    rgba(255, 255, 255, 0.95) 100.58%
+  );
+  box-shadow: 0px 1px 2px rgba(4, 26, 58, 0.01),
+    0px 13px 157px -58px rgba(0, 0, 0, 0.13);
+  position:relative;
+  z-index: 1;
+  section {
+    &:first-child {
+      width: 100%;
+      padding: 40.68px 0 15.4px 0;
+      border-bottom: 1px solid #f6f6f6;
+    }
+    &:last-child {
+      padding: 45.17px 0 45.4px 0;
+    }
+    h1 {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 36px;
+      line-height: 140%;
+      letter-spacing: -0.04em;
+      color: #0c4596;
+    }
+    h2 {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 22.32px;
+      line-height: 27px;
+      letter-spacing: -0.62px;
+      text-transform: uppercase;
+
+      color: #b5121a;
+    }
+    h3 {
+      margin-top: 8.11px;
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 13px;
+      line-height: 16px;
+      letter-spacing: -0.025em;
+      color: #588edb;
+    }
+    h4 {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 36px;
+      line-height: 140%;
+      letter-spacing: -0.04em;
+      color: #0c4596;
+    }
+    .secure-note {
+      width: 188px;
+      text-align: right;
+
+      font-family: Montserrat;
+      font-style: italic;
+      font-weight: normal;
+      font-size: 11px;
+      line-height: 119.4%;
+      letter-spacing: -0.02em;
+      color: #201728;
+
+      position: absolute;
+      right: 17.1px;
+      top: 10px;
+      svg {
+        margin-right: 3px;
+      }
+    }
+  }
+  @include media-md {
+    section {
+      &:first-child {
+        padding: 14px 0 0px 0;
+        border-bottom: 0px;
+      }
+      &:last-child {
+        padding: 8px 15px 0 15px;
+      }
+      .secure-note {
+        display: none;
+      }
+      h1 {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 140%;
+        letter-spacing: -0.04em;
+        color: #0c4569;
+      }
+      h3 {
+        margin-top: 4.72px;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 10px;
+        line-height: 109.4%;
+        letter-spacing: -0.025em;
+        color: #2081bf;
+      }
+      h4 {
+        font-size: 14px;
+        line-height: 140%;
+        letter-spacing: -0.04em;
+        color: #0c4569;
+      }
+    }
+  }
+}

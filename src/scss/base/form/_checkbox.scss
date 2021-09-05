@@ -1,0 +1,50 @@
+[type='checkbox'] {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+
+    + label {
+        position: relative;
+        cursor: pointer;
+        padding-left: 35px;
+    }
+
+    + label::before {
+        content: '';
+        position: absolute;
+        width: 22px;
+        height: 22px;
+        background-color: #fff;
+        left: 0;
+
+        @include media-tn {
+            top: 27%;
+        }
+    }
+
+    + label::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 5px;
+        height: 11px;
+        border: solid #4e70ae;
+        border-width: 0 2px 2px 0;
+        left: 8px;
+        top: 3px;
+
+        @include media-tn {
+            top: 32%;
+        }
+    }
+
+    &:not(:checked) + label::after {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    &:checked + label::after {
+        opacity: 1;
+        transform: scale(1) rotate(45deg);
+    }
+}

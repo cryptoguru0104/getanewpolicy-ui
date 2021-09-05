@@ -1,0 +1,29 @@
+@import 'scss/basic';
+@import 'scss/mixin/media';
+
+.step-birthmonth {
+  .month-list {
+    margin-bottom: 17px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(3, 167px);
+    column-gap: 15px;
+    row-gap: 10px;
+    .btn {
+      height: 63px;
+    }
+  }
+}
+
+@include media-md {
+  .step-birthmonth {
+    .month-list {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      column-gap: 10px;
+      .btn {
+        height: 50px;
+      }
+    }
+  }
+}

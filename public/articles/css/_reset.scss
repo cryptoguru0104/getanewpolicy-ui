@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+ol {
+  margin: 0;
+}
+input, button {
+  outline: none;
+}
+p {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  cursor: pointer;
+}
+a {
+  color: #3F8FEB;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

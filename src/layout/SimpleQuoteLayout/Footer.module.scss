@@ -1,0 +1,42 @@
+@import 'scss/basic';
+@import 'scss/mixin/media';
+.footer :global {
+  background: #f6f6f6 ;
+  .footer-menu-wrap {
+    height: 31px !important;
+    display: flex;
+    align-items: center;
+    a {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 17.07px;
+      text-decoration-line: underline;
+      color: #93939b;
+    }
+  }
+  .disclaimer {
+    padding-top: 46.71px;
+    width: 800px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 19px;
+    text-align: left;
+    color: #6a6a6a;
+  }
+  @include media-md {
+    .footer-menu-wrap a {
+      font-size: 10px;
+      line-height: 12px;
+    }
+    .disclaimer {
+      width: auto;
+      padding: 22px 15px 145px 14px;
+      font-size: 11px;
+      line-height: 16px;
+    }
+  }
+}

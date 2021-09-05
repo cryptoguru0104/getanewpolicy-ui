@@ -1,0 +1,191 @@
+@import '../../mixin/media';
+@import '../../mixin/appearance';
+
+.range-slider {
+    position: relative;
+    text-align: center;
+
+    &::before {
+        content: '$50';
+        display: inline-block;
+        top: 35px;
+        left: -10px;
+        position: absolute;
+        font-size: 12px;
+        letter-spacing: 0.5px;
+        color: rgba(255, 255, 255, 0.6);
+
+        @include media-sm {
+            top: auto;
+            bottom: -3px;
+            left: 0;
+            font-size: 16px;
+        }
+    }
+    &::after {
+        content: '$650';
+        display: inline-block;
+        top: 35px;
+        right: -10px;
+        position: absolute;
+        font-size: 12px;
+        letter-spacing: 0.5px;
+        color: rgba(255, 255, 255, 0.6);
+
+        @include media-sm {
+            top: auto;
+            bottom: -3px;
+            right: 0;
+            font-size: 16px;
+        }
+    }
+    .input-range {
+        outline: none;
+        padding: 0;
+        width: 100%;
+        // height: 6px;
+        height: 35px;
+        background-color: rgba(255, 255, 255, 0);
+        background-image:
+            linear-gradient(rgba(255, 192, 123, 1) 50%, rgba(255, 192, 123, 1) 50%),
+            linear-gradient(rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.3) 50%);
+        background-size: calc(100% / 6) 5px, 100% 5px;
+        background-position-y: center;
+        background-repeat: no-repeat;
+        border-radius: 55%;
+        cursor: pointer;
+
+        @include appearance;
+
+        @include media-sm {
+            margin-top: 20px;
+        }
+    }
+    .input-range::-webkit-slider-thumb {
+        @include appearance;
+
+        width: 15px;
+        height: 15px;
+        background-color: #ffc07b;
+        box-shadow: 0 0 0 4px rgba(255, 192, 123, 0.2), 0 0 0 8px rgba(255, 192, 123, 0.3);
+        border: 0;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background 0.15s ease-in-out;
+
+        @include media-sm {
+            width: 25px;
+            height: 25px;
+            box-shadow: 0 0 0 6px rgba(255, 192, 123, 0.2), 0 0 0 14px rgba(255, 192, 123, 0.2);
+        }
+    }
+    .input-range::-moz-range-thumb {
+        width: 15px;
+        height: 15px;
+        background-color: #ffc07b;
+        box-shadow: 0 0 0 4px rgba(255, 192, 123, 0.2), 0 0 0 8px rgba(255, 192, 123, 0.3);
+        border: 0;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background 0.15s ease-in-out;
+
+        @include media-sm {
+            width: 25px;
+            height: 25px;
+            box-shadow: 0 0 0 6px rgba(255, 192, 123, 0.2), 0 0 0 14px rgba(255, 192, 123, 0.3);
+        }
+    }
+    .input-range::-moz-range-track {
+        background: rgba(255, 255, 255, 0.2);
+        border: 0;
+    }
+    .input-range::-moz-focus-inner {
+        border: 0;
+        padding: 0;
+    }
+    .input-range::-moz-focus-outer {
+        border: 0;
+    }
+    .input-range::-ms-fill-lower {
+        background: rgba(255, 255, 255, 0);
+        border: 0 none;
+        border-radius: 20px;
+    }
+    .input-range::-ms-fill-upper {
+        background: rgba(255, 255, 255, 0);
+        border: 0 none;
+        border-radius: 20px;
+    }
+    .input-range:focus::-ms-fill-lower {
+        background: rgba(255, 255, 255, 0);
+    }
+    .input-range:focus::-ms-fill-upper {
+        background: rgba(255, 255, 255, 0);
+    }
+    .input-range::-ms-tooltip {
+        display: none;
+    }
+    .input-range::-ms-thumb {
+        @include appearance;
+
+        width: 12px;
+        height: 12px;
+        background-color: #ffc07b;
+        border: 6px solid rgba(255, 192, 123, 0.2);
+        box-shadow: none;
+        // box-shadow: 0 0 0 4px rgba(255, 192, 123, 0.2);
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background 0.15s ease-in-out;
+    }
+    .input-range::-ms-track {
+        width: 100%;
+        height: 7px;
+        cursor: pointer;
+        background: transparent;
+        border-color: transparent;
+        color: transparent;
+        border-width: 16px 0;
+    }
+    .range-value {
+        display: inline-block;
+        position: relative;
+        font-size: 15px;
+        letter-spacing: 0.6px;
+        text-align: center;
+        color: #fff;
+        top: 11px;
+        border-bottom: 1px solid #faa02a;
+        padding-left: 4px;
+        padding-bottom: 2px;
+        &::before {
+            content: '$';
+            position: absolute;
+            top: 0;
+            left: -6px;
+
+            @include media-sm {
+                position: static;
+            }
+        }
+
+        @include media-sm {
+            position: absolute;
+            top: -20px;
+            max-width: 48px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            font-size: 22px;
+            padding-left: 0;
+            letter-spacing: 0;
+        }
+    }
+}
+
+.ie,
+.edge {
+    .input-range {
+        border-radius: 0;
+    }
+}

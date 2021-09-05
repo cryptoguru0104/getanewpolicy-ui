@@ -1,0 +1,141 @@
+@import 'mixin/media';
+@import 'mixin/ie';
+@import 'base/reset';
+@import 'general';
+
+@import 'progress-bar';
+@import 'buttons';
+@import 'form';
+@import 'steps';
+@import 'text';
+
+html,
+body {
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  color: #979797;
+}
+input,
+select,
+button,
+textarea {
+  font-family: 'Roboto', sans-serif;
+}
+#root {
+  min-height: 100vh;
+  min-height: var(--app-height);
+}
+.spinner-container {
+  @extend .d-flex-center;
+  position: fixed;
+  z-index: 3;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+}
+header {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .logo {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: -0.5px;
+    text-transform: uppercase;
+    color: #247fe8;
+    font-family: "Montserrat", sans-serif;
+  }
+  .location {
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
+    transform: translate(3px, -40%);
+    color: #666666;
+  }
+
+  @include media-md {
+    .logo {
+      font-size: 14px;
+      line-height: 17px;
+    }
+  }
+}
+footer {
+  // background: #f9f9f9;
+  box-shadow: 0px -1px 0px #f0f0f0;
+  .footer-menu-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+  }
+  .footer-menu {
+    margin: 0 20px;
+    a {
+      color: #979797;
+      font-size: 12px;
+      line-height: 14px;
+      transition: all 0.3s;
+      &:hover {
+        color: #777;
+      }
+    }
+  }
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 48px;
+  color: #0d0e0e;
+}
+
+h4 {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 42px;
+  color: #0d0e0e;
+  margin-bottom: 20px;
+  @include media-md {
+    font-size: 24px;
+    line-height: 28px;
+  }
+}
+
+.btn-back {
+  position: absolute;
+  left: 20px;
+  top: 17px;
+}
+.why-do-ask {
+  margin-top: 50px;
+  h5 {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+  }
+  p {
+    margin-top: 9px;
+    font-style: italic;
+    font-size: 14px;
+    line-height: 140%;
+  }
+}
+
+:root {
+  --app-height: 100%;
+}
+@include media-md {
+  html {
+    height: -webkit-fill-available;
+  }
+  #root {
+    display: flex;
+    flex-direction: column;
+  }
+  footer {
+    margin-top: auto;
+  }
+}

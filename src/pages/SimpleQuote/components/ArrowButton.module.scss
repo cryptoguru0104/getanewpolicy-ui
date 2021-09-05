@@ -1,0 +1,57 @@
+@import 'scss/mixin/media';
+.arrowbutton :global {
+  .arrow-button {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2px 2px 2px 2px;
+    width: 421px;
+    height: 72px;
+    background: #0c4569;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 60px;
+    display: flex;
+    align-items: center;
+    button {
+      width: 100%;
+      height: 100%;
+      color: white;
+      border: 1px solid #ffffff;
+      background: #0c4569;
+      box-sizing: border-box;
+      border-radius: 60px;
+
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 29px;
+      text-align: center;
+      color: #ffffff;
+      position: relative;
+      div {
+        position: absolute;
+        right: -1px;
+        top: -1px;
+        height: 100%;
+        aspect-ratio: 1/1;
+        background: #b5121a;
+        border: 1px solid #ffffff;
+        border-radius: 50%;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        svg {
+          margin: auto auto;
+        }
+      }
+    }
+    @include media-md {
+      width: auto;
+      height: 48px;
+      button {
+        font-size: 17px;
+        line-height: 20.72px;
+      }
+    }
+  }
+}

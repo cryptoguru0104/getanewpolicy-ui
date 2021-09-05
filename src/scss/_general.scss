@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+}
+
+a:active,
+a:focus,
+a:visited {
+    outline: none !important;
+}
+
+a {
+    color: rgba(0, 0, 0, 0.9);
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+body {
+    overflow-x: hidden; //fix for mobile menu
+}
+
+img,
+svg {
+    max-width: 100%;
+}
+
+.hidden {
+    display: none !important;
+}

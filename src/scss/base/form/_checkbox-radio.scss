@@ -1,0 +1,85 @@
+%label-checkbox-radio {
+    display: inline-block;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    white-space: nowrap;
+
+    input {
+        opacity: 0;
+        position: absolute;
+        pointer-events: none;
+    }
+
+    input + .marker {
+        display: inline-block;
+        background: #fff;
+        width: 16px;
+        height: 16px;
+        border: 1px solid rgba(0, 0, 0, 0.7);
+        position: relative;
+        vertical-align: top;
+
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            transition: all 0.3s ease;
+            transform-origin: 50% 50%;
+            box-sizing: border-box;
+        }
+    }
+
+    .label {
+        font-size: 14px;
+        line-height: 16px; // same as height of box
+        margin-left: 2px;
+        vertical-align: top;
+        color: #000;
+    }
+}
+
+label.checkbox {
+    @extend %label-checkbox-radio;
+
+    input + .marker {
+        border-radius: 2px;
+
+        &::after {
+            height: 10px;
+            width: 6px; // proportion are 12:20
+            top: 2px; // = parent height / 2 - marker height / 2 - parent border
+            left: 4px; // = parent width / 2 - marker width / 2 - parent border
+            transform: rotate(45deg) scale(0);
+            border: solid #000;
+            border-width: 0 2px 2px 0;
+            border-radius: 0 0 2px;
+        }
+    }
+
+    input:checked + .marker::after {
+        transform: rotate(45deg) scale(1);
+    }
+}
+
+label.radio {
+    @extend %label-checkbox-radio;
+
+    input + .marker {
+        border-radius: 50%;
+
+        &::after {
+            width: 8px; // half of box
+            height: 8px;
+            top: 3px; // = parent height / 2 - marker height / 2 - parent border
+            left: 3px; // = parent width / 2 - marker width / 2 - parent border
+            transform: scale(0);
+            background: #000;
+            border-radius: 50%;
+        }
+    }
+
+    input:checked + .marker::after {
+        transform: scale(1);
+    }
+}

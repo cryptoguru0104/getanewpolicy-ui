@@ -1,0 +1,21 @@
+@import 'scss/mixin/media';
+.carBg {
+  text-align: right;
+  margin-top: -10%;
+  position: relative;
+  z-index: 1;
+}
+.carBg :global {
+  .mobile-car {
+    display: none;
+  }
+  @include media-md {
+    margin-top: 0;
+    .mobile-car {
+      display: block;
+    }
+    .car {
+      display: none;
+    }
+  }
+}

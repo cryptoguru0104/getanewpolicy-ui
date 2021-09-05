@@ -1,0 +1,194 @@
+@import 'scss/basic';
+@import 'scss/mixin/media';
+
+.aboutpage {
+  font-family: 'Poppins', sans-serif;
+  z-index: 0;
+  background: #fafafb;
+}
+.aboutpage :global main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .mission {
+    margin-top: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    .title {
+      max-width: 626px;
+      text-align: left;
+      h1 {
+        font-weight: 600;
+        font-size: 72px;
+        line-height: 72px;
+        letter-spacing: -0.06em;
+        color: #000000;
+        text-shadow: 0px 10px 21px #ffffff,
+          0.5px 0.5px 0px rgba(255, 255, 255, 0.44),
+          2px 4px 6px rgba(30, 30, 30, 0.31);
+        margin-bottom: 0px;
+        margin-top: 0px;
+      }
+      .btn-primary {
+        margin-top: 68px;
+        font-family: 'Poppins';
+        font-size: 18.0519px;
+        width: 237px;
+        height: 56px;
+        line-height: 27px;
+        box-shadow: 2px 8px 21px -3px rgba(6, 27, 90, 0.26);
+        border-radius: 6px;
+        border: 0;
+        letter-spacing: 0.02em;
+        background: #335ee0;
+        color: white;
+      }
+    }
+
+    .img {
+      margin-top: 31px;
+      width: 724px;
+      img {
+        border-radius: 9px;
+      }
+      .btn-container {
+        padding: 33px 19px 74px 19px;
+      }
+      .btn-primary {
+        width: 100%;
+        display: none;
+      }
+    }
+  }
+  .blog-box {
+    margin-top: 160px;
+    margin-bottom: 196px;
+    width: 100%;
+    height: 668px;
+    border: 1px solid #dfdfdf;
+    border-radius: 12px;
+    box-shadow: 0px 8px 12px -3px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    background: white;
+    .finding {
+      width: 552px;
+      text-align: left;
+      h2 {
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 40px;
+      }
+      p {
+        margin-top: 22px;
+        font-size: 14px;
+        line-height: 180%;
+        color: #6a7076;
+      }
+    }
+    .partner {
+      width: 364px;
+      h2 {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 36px;
+        color: #292c30;
+      }
+      p {
+        margin-top: 9px;
+        font-size: 18px;
+        line-height: 32px;
+        color: #6a7076;
+      }
+      .btn-primary {
+        font-size: 18px;
+        margin-top: 34px;
+        border-radius: 6px;
+      }
+    }
+    .divider {
+      margin-left: 14%;
+      margin-right: 6%;
+      height: 435px;
+      border: 1px solid #dadada;
+    }
+  }
+  @include media-md {
+    .container {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .mission {
+      display: block;
+      margin-top: 32px;
+      .title {
+        width: 100%;
+        margin-top: 0px;
+        h1 {
+          font-size: 30px;
+          width: 270px;
+          line-height: 30px;
+          letter-spacing: -1px;
+          text-shadow: none;
+          margin-left: 24px;
+        }
+        .btn-primary {
+          display: none;
+        }
+      }
+      .img {
+        width: 100%;
+        img {
+          border-radius: 0px;
+        }
+        .btn-primary {
+          display: block;
+        }
+      }
+    }
+    .blog-box {
+      margin-top: 0;
+      margin-bottom: 0;
+      box-shadow: none;
+      border: none;
+      display: block;
+      border-radius: 0;
+      height: auto;
+      padding: 28px 21px 35px 24px;
+      .finding {
+        width: 100%;
+        h2 {
+          padding-right: 20px;
+          font-size: 24px;
+          line-height: 140%;
+          color: #292c30;
+        }
+        p {
+          line-height: 160%;
+        }
+      }
+      .partner {
+        width: 100%;
+        h2 {
+          line-height: 160%;
+        }
+        p {
+          line-height: 160%;
+          font-size: 14px;
+        }
+      }
+      .divider {
+        height: 0;
+        width: 100%;
+        margin: 49px 0 26px 0;
+      }
+    }
+    .footer {
+      padding-top: 51px !important;
+    }
+  }
+}

@@ -1,0 +1,53 @@
+@import 'scss/basic';
+@import 'scss/mixin/media';
+
+.item {
+  &:nth-child(even) :global(.title-bar) {
+    background: #f8f9fb;
+  }
+  &:nth-child(odd) :global(.title-bar) {
+    background: white;
+  }
+}
+.item :global {
+  .content {
+    display: none;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 300;
+  }
+  .title-bar {
+    text-align: left;
+    cursor: pointer;
+    padding: 27px 40px 27px 27px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    line-height: 27px;
+    color: black;
+  }
+  @include media-md {
+    .title-bar {
+      padding: 21px 24px 21px 21px;
+      font-size: 14px;
+      line-height: 21px;
+      text-align: left;
+    }
+  }
+}
+.item.opened :global {
+  .title-bar svg {
+    transform: rotate(180deg);
+  }
+  .content {
+    display: block;
+    padding: 20px 40px 20px 27px;
+    text-align: left;
+  }
+  @include media-md {
+    .content {
+      font-size: 12px;
+      padding: 20px 24px 20px 27px;
+    }
+  }
+}

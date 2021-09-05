@@ -1,0 +1,212 @@
+@import 'scss/basic';
+@import 'scss/mixin/media';
+
+.ratestep :global {
+  .step-viewplan {
+    .match-list {
+      max-width: 770px;
+      li {
+        background: white;
+        height: 79px;
+        padding: 22px 180px 25px 0;
+        margin-bottom: 10px;
+        border: 1px solid #ededed;
+        box-shadow: 0px 4px 13px -4px rgba(0, 0, 0, 0.21);
+        position: relative;
+        cursor: pointer;
+        &:first-child {
+          border: 1px solid #dac617;
+          &:before {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            left: 0;
+            top: 0;
+            border-left: 15px solid #dac617;
+            border-top: 13px solid #dac617;
+            border-right: 15px solid transparent;
+            border-bottom: 13px solid transparent;
+          }
+          &:after {
+            content: '★';
+            color: white;
+            position: absolute;
+            left: 4px;
+            top: 3px;
+            font-size: 11px;
+          }
+        }
+      }
+      .number {
+        width: 47px;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 21px;
+        color: #000;
+        text-align: center;
+        letter-spacing: -0.5px;
+        border-right: 1px solid #c9c9c9;
+        flex-shrink: 0;
+      }
+      .logo {
+        width: 137px;
+        flex-shrink: 0;
+        padding: 0 10px;
+        text-align: center;
+      }
+      .desc {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+
+        color: #4b4b4b;
+        padding: 0 20px;
+      }
+      .btn-blue {
+        background: #0c4569;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 180px;
+        height: calc(100% + 1px);
+        box-shadow: none;
+        border-radius: 0;
+        border: 0;
+        font-weight: 500;
+        text-align: left;
+        padding-left: 15px;
+        letter-spacing: initial;
+        font-size: 18px;
+        line-height: 21px;
+      }
+    }
+
+    .box {
+      margin-top: 75px;
+      padding: 31px 52px;
+      max-width: 425px;
+      border: 1px solid #ededed;
+      box-shadow: 0px -4px 24px -6px rgba(0, 0, 0, 0.09);
+      p {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        color: #464646;
+        margin-bottom: 15px;
+        strong {
+          font-weight: bold;
+        }
+      }
+      .btn-blue {
+        background: #0c4569;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  @include media-md {
+    .step-viewplan {
+      h4 {
+        font-size: 18px;
+        line-height: 21px;
+      }
+      .match-list {
+        li {
+          height: 70px;
+          padding: 0 70px 0 0;
+        }
+        .number {
+          width: 29px;
+          flex-shrink: 0;
+        }
+        .logo {
+          width: 90px;
+          flex-shrink: 0;
+          padding: 0 5px;
+        }
+        .btn {
+          width: 59px;
+          text-indent: -9999px;
+          svg {
+            right: 21px;
+          }
+        }
+        .desc {
+          font-size: 12px;
+          line-height: 14px;
+          padding: 0 0 0 10px;
+        }
+      }
+      .box {
+        margin-top: 30px;
+        padding: 18px 20px;
+        margin-left: -15px !important;
+        margin-right: -15px !important;
+        border-bottom-width: 0;
+        max-width: unset;
+        p {
+          font-size: 14px;
+          line-height: 16px;
+        }
+      }
+    }
+  }
+  .step-rateviewer {
+    background: #f6f6f6;
+    .respect-text {
+      p {
+        margin-top: 45px;
+        margin-right: auto;
+        margin-left: auto;
+        width: 506px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 25px;
+        letter-spacing: -0.02em;
+        color: #000000;
+      }
+      .rating {
+        margin-top: 8px;
+      }
+      h4 {
+        margin-top: 12px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 25px;
+        text-align: center;
+        letter-spacing: -0.02em;
+        color: #000000;
+      }
+      .icons {
+        margin-top: 54.2px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+      }
+    }
+  }
+
+  @include media-md {
+    .step-rateviewer {
+      padding: 20px 16px 30px 22px;
+      .respect-text {
+        p {
+          margin-top: 13px;
+          width: auto;
+        }
+        h4 {
+          margin-top: 0px;
+        }
+        .icons {
+          margin-top: 17px;
+        }
+      }
+    }
+  }
+}

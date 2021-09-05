@@ -1,0 +1,29 @@
+@import 'scss/basic';
+@import 'scss/mixin/media';
+
+.step-birthday {
+  .days-list {
+    margin-bottom: 17px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(4, 124px);
+    column-gap: 13px;
+    row-gap: 10px;
+    .btn {
+      height: 55px;
+    }
+  }
+}
+
+@include media-md {
+  .step-birthday {
+    .days-list {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      column-gap: 8px;
+      .btn {
+        height: 50px;
+      }
+    }
+  }
+}

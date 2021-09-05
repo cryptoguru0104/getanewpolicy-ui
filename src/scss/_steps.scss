@@ -1,0 +1,25 @@
+@import 'mixin/media';
+@import 'mixin/placeholder';
+@import 'mixin/ie';
+@import 'basic';
+
+
+.form-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  min-height: calc(100vh - 31px - 50px - 40px);
+  width: calc(100% - 30px);
+  max-width: 800px;
+  @include mx-auto;
+  .content {
+    @include mx-auto;
+  }
+
+  @include media-md {
+    padding: 0;
+    min-height: initial;
+  }
+}

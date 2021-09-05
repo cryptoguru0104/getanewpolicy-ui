@@ -1,0 +1,38 @@
+@import 'mixin/media';
+
+.form-step {
+  position: relative;
+  padding: 40px 0;
+  width: 100%;
+  margin: 0;
+
+  @include media-tn {
+    padding-top: 23px;
+    padding-bottom: 20px;
+  }
+}
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #D2D2D2;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #D2D2D2;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: #D2D2D2;
+}

@@ -1,0 +1,125 @@
+@import 'scss/mixin/media';
+
+:root {
+  --address-form-gap: 20px;
+}
+
+.step-address {
+  .form-step {
+    margin-top: var(--address-form-gap);
+    padding: 0;
+  }
+  h4 {
+    margin-bottom: 15px;
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
+  .content {
+    margin-top: 40px;
+    max-width: 521px;
+  }
+
+  .options {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(1, 100%);
+    column-gap: 19px;
+    row-gap: 20px;
+    @include media-md-up {
+      &.edit-address {
+        grid-template-columns: repeat(2, 254px);
+        row-gap: 33px;
+      }
+    }
+  }
+
+  .control {
+    margin: 0;
+    width: auto;
+  }
+  .text-desc {
+    svg {
+      vertical-align: middle;
+    }
+  }
+  .state {
+    font-style: italic;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 40px;
+    text-decoration-line: underline;
+    color: #000;
+  }
+
+  .btn-blue {
+    margin: 0;
+    margin-top: 27px;
+    width: 100%;
+  }
+
+  .tcp-text {
+    // margin-top: 38px;
+    // padding-top: 26px;
+    margin-top: 20px;
+    padding-top: 15px;
+    display: block;
+    max-width: 521px;
+    border-top: 1px solid #eaeaea;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 160%;
+    color: #979797;
+    text-align: left;
+    padding-bottom: 20px;
+  }
+}
+
+@include media-md {
+  .step-address {
+    margin-top: 0;
+    h4 {
+      font-size: 19px;
+      line-height: 22px;
+      margin-bottom: 0;
+    }
+    .text-desc {
+      margin-top: 9px;
+    }
+    .content {
+      margin-top: 19px;
+    }
+    .options {
+      grid-template-columns: repeat(1, 100%);
+      row-gap: 20px;
+      margin-bottom: 18px;
+    }
+    .state {
+      width: 100%;
+      text-align: center;
+      line-height: 21px;
+      font-size: 18px;
+    }
+    .btn-blue {
+      margin: 0;
+      height: 70px;
+      font-size: 22px;
+    }
+    .tcp-text {
+      margin-top: 20px;
+      padding-top: 15px;
+    }
+    .control {
+      label {
+        font-size:14px;
+      }
+      input {
+        font-size: 18px;
+        letter-spacing: -0.5px;
+        height: 60px;
+      }
+    }
+  }
+}

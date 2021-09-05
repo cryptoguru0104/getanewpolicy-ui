@@ -1,0 +1,60 @@
+@import 'scss/basic';
+@import 'scss/mixin/media';
+
+.agerangestep :global {
+  .step-agerange {
+    background: #f6f6f6;
+    padding: 67.95px 0 258px 0;
+    .title {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 29px;
+      color: #0c4596;
+    }
+    .age-list {
+      margin-bottom: 17px;
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      grid-template-columns: repeat(4, 190px);
+      column-gap: 19px;
+      row-gap: 13px;
+      .btn {
+        border-radius: 0px;
+        font-family: Montserrat;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 29px;
+        height: 93px;
+      }
+    }
+  }
+
+  @include media-md {
+    .step-agerange {
+      padding: 22px 0 35px 0;
+      .title {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 22px;
+        color: #0c4596;
+      }
+      .age-list {
+        grid-template-columns: repeat(3, 103px);
+        column-gap: 11px;
+        row-gap: 8px;
+        .btn {
+          height: 83px;
+          padding: 0 1px 0 1px;
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 22px;
+        }
+      }
+    }
+  }
+}

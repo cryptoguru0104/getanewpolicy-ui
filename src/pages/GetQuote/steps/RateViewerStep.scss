@@ -1,0 +1,21 @@
+@import 'scss/basic';
+@import 'scss/mixin/media';
+
+.step-rateviewer {
+  h4 {
+    margin-bottom: 38px;
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
+}
+
+@include media-md {
+  .step-rateviewer {
+    h4 {
+      margin-bottom: 20px;
+      font-size: 20px;
+      line-height: 23px;
+    }
+  }
+}

@@ -1,0 +1,74 @@
+@import 'scss/mixin/media';
+.step-name {
+  h4 {
+    margin-bottom: 40px;
+  }
+  .content {
+    max-width: 494px;
+  }
+  .options {
+    display: flex;
+    justify-content: space-between;
+  }
+  .control {
+    width: 237px;
+    margin: 0;
+    input {
+      text-align: left;
+    }
+  }
+  .text-desc {
+    margin-top: 40px;
+    svg {
+      vertical-align: middle;
+    }
+  }
+  .mobile-show {
+    display: none;
+  }
+
+  .btn-blue {
+    margin-top: 40px;
+  }
+}
+@include media-md {
+  .step-name {
+    h4 {
+      margin-bottom: 0;
+    }
+    .text-desc {
+      margin-top: 9px;
+      display: none;
+      &.mobile-show {
+        display: block;
+      }
+    }
+    .content {
+      margin-top: 19px;
+    }
+    .options {
+      flex-direction: column;
+      margin-bottom: 0;
+    }
+    .control {
+      width: 100%;
+      margin-bottom: 30px;
+      label {
+        font-size: 14px;
+      }
+      input {
+        height: 60px;
+        font-size: 18px;
+        letter-spacing: -0.5px;
+      }
+    }
+    .btn-blue {
+      margin: 0;
+      width: 100%;
+    }
+    .tcp-text {
+      margin-top: 30px;
+      padding-top: 4px;
+    }
+  }
+}

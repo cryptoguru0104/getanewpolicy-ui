@@ -1,0 +1,139 @@
+@import 'scss/basic';
+@import 'scss/mixin/media';
+
+.faqpage {
+  font-family: 'Poppins', sans-serif;
+  background: #fafafa;
+}
+.faqpage :global main {
+  padding: 108px 0 185px 0;
+  h1 {
+    margin: 0 auto 56px auto;
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 96px;
+    text-align: center;
+    color: #000000;
+  }
+  h2 {
+    color: #6e7177;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  h3 {
+    margin-top: 55px;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 27px;
+    text-align: center;
+    color: #5c5c5c;
+  }
+  .text-block {
+    width: 872px;
+    border: 1px solid #dddddd;
+    position: relative;
+    box-shadow: 0 11px 10px -8px rgba(30, 30, 30, 0.1);
+  }
+  .submit-form {
+    margin: 157px auto 0 auto;
+    background: white;
+    width: 871px;
+    border: 3px solid rgba(30, 30, 30, 0.1);
+    padding: 65px 55.6px 56.8px 49px;
+    border-radius: 4px;
+    h2 {
+      margin: 0 0 50px 0;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 40px;
+      text-align: center;
+      color: #000000;
+      text-transform: initial;
+    }
+    .row {
+      display: flex;
+      &:first-of-type {
+        .control {
+          &:first-of-type {
+            margin-right: 7px;
+          }
+          &:last-of-type {
+            margin-left: 7px;
+          }
+        }
+      }
+    }
+    .control {
+      margin-top: 16px;
+      width: 100%;
+      input {
+        height: 50px;
+      }
+      input,
+      textarea {
+        font-size: 14px;
+        font-weight: 500;
+      }
+      textarea {
+        min-height: 215px;
+      }
+    }
+    .btn-primary {
+      margin-top: 40px;
+      width: 100%;
+      border-radius: 4px;
+    }
+  }
+  @include media-md {
+    padding: 39px 0 0 0;
+    h1 {
+      margin: 0 auto 39px auto;
+      font-size: 24px;
+      line-height: 36px;
+    }
+    h2 {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 21px;
+    }
+    h3 {
+      display: none;
+    }
+    .text-block {
+      width: 100%;
+    }
+    .submit-form {
+      margin: 63px 0 0 0;
+      padding: 56px 12px 38px 12px;
+      width: 100%;
+      border: 0;
+      border-radius: 0;
+      h2 {
+        font-size: 24px;
+        line-height: 32.5px;
+      }
+      .row {
+        display: block;
+        .control {
+          margin-left: 0px !important;
+          margin-right: 0px !important;
+          margin-top: 31px;
+        }
+        &:first-of-type {
+          .control:last-child {
+            margin-top: 24px;
+          }
+        }
+      }
+      .control textarea {
+        min-height: 269px;
+      }
+      .btn-primary {
+        border-radius: 4px !important;
+      }
+    }
+  }
+}

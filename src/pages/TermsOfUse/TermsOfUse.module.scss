@@ -1,0 +1,79 @@
+@import 'scss/mixin/media';
+
+.termsPage :global main {
+  text-align: left;
+  color: #6a7076;
+  background: #fafafb;
+  padding-bottom: 100px;
+  .bg-white {
+    background: white;
+    padding: 88px 0 53px 0;
+  }
+  .title-bar {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 45px;
+  }
+  section {
+    max-width: 1113px;
+    margin-top: 76px;
+  }
+  .section-head {
+    margin-top: 0;
+  }
+  h1 {
+    margin: 0;
+    color: #292c30;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 1;
+    letter-spacing: -1px;
+  }
+  .date {
+    color: #6a7076;
+    font-family: Montserrat;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 26px;
+    margin-left: 20px;
+  }
+  .text-600 {
+    color: #292c30;
+    font-weight: 600;
+  }
+  h4 {
+    font-size: 18px;
+    line-height: 2;
+    font-weight: bold;
+    color: #6a7076;
+  }
+  p {
+    font-size: 18px;
+    line-height: 2;
+  }
+
+  @include media-md {
+    .bg-white {
+      padding: 55px 0 60px 0;
+    }
+    h1 {
+      font-size: 24px;
+    }
+    .title-bar {
+      margin-bottom: 28px;
+    }
+    .date {
+      font-weight: 500;
+      font-size: 10px;
+      line-height: 1.5;
+      margin-left: 12px;
+    }
+    .section-head {
+      p {
+        font-size: 14px;
+        line-height: 160%;
+      }
+    }
+  }
+}

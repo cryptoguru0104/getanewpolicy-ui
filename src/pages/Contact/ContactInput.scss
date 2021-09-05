@@ -1,0 +1,49 @@
+@import 'scss/mixin/media';
+
+.input-label {
+  padding: 34px 0 0 0;
+
+  input {
+    height: 56px;
+  }
+  textarea {
+    resize: vertical;
+    padding-top: 10px;
+    height: 173px;
+  }
+  input,
+  textarea {
+    padding-left: 20px;
+    width: 100%;
+    margin-top: 8px;
+    border-radius: 3px;
+    background: white;
+    border: none;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+    color: #6a7076;
+    box-shadow: 0px 5px 5px -3px rgba(30, 30, 30, 0.1);
+  }
+  label {
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 26px;
+    color: #292c30;
+  }
+  @include media-md {
+    padding-top: 5px;
+    label,
+    input,
+    textarea {
+      font-size: 14px;
+    }
+    input,
+    textarea {
+      margin-top: 6px;
+    }
+  }
+}

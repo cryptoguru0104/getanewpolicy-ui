@@ -1,0 +1,12 @@
+@import 'scss/mixin/media';
+.step-birthyear {
+  .control input {
+    font-weight: bold;
+  }
+  .btn-blue {
+    margin-top: 19px;
+    @include media-md {
+      margin-top: 30px;
+    }
+  }
+}

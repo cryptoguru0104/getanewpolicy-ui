@@ -1,0 +1,49 @@
+@import 'mixin/media';
+
+.progress-bar {
+  @include media-tn {
+  }
+
+  .block-progress {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .line {
+    height: 8px;
+    background: rgba(168, 205, 249, 0.24);
+
+    &-inner {
+      content: '';
+      display: block;
+      width: 3%;
+      height: 100%;
+      background: #247fe8;
+      transition: all 0.5s ease;
+    }
+    @include media-md {
+      height: 5px;
+    }
+  }
+
+  .info {
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 15px;
+    color: #979797;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 8px;
+    @include media-md {
+      font-size: 11px;
+      line-height: 26px;
+      margin-top: 0;
+    }
+  }
+
+  strong {
+    font-weight: bold;
+  }
+}

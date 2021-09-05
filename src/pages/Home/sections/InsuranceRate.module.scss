@@ -1,0 +1,109 @@
+@import 'scss/basic';
+@import 'scss/mixin/media';
+.InsuranceRate {
+  @include mx-auto;
+  margin-top: 244px;
+  max-width: 1238px;
+  position: relative;
+  padding-bottom: 45px;
+  @include media-md {
+    margin-top: 63px;
+    padding-bottom: 0;
+  }
+}
+.InsuranceRate :global {
+  h2 {
+    line-height: 120%;
+    margin: 0 auto;
+    max-width: 545px;
+    line-height: 43.2px !important;
+  }
+  .rate-list {
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+    row-gap: 30px;
+    position: relative;
+    z-index: 2;
+    > div {
+      background: #ffffff;
+      border: 1.28942px solid #eef0f4;
+    }
+    h4 {
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 48px;
+      border-bottom: 1.28942px solid #eef0f4;
+      text-align: center;
+      color: #363a46;
+      margin: 0;
+    }
+    p {
+      padding: 29px 37px;
+      color: #363a46;
+      font-size: 18.0519px;
+      line-height: 31px;
+    }
+  }
+  .btn-primary {
+    margin-top: 82px;
+    max-width: 508.25px;
+    height: 72.21px;
+    box-shadow: 2px 8px 21px -3px rgba(6, 27, 90, 0.26);
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 18.0519px;
+    line-height: 27px;
+    position: relative;
+    z-index: 2;
+  }
+  .bg {
+    position: absolute;
+    width: 100vw;
+    height: 2000px;
+    bottom: 0px;
+    left: -5%;
+    background: linear-gradient(
+      360deg,
+      #f9fafd 7.49%,
+      rgba(249, 250, 253, 0) 100%
+    );
+    border: 2px solid #f3f5fd;
+    z-index: -1;
+  }
+  .white-bg {
+    position: absolute;
+    left: 5%;
+    width: 100vw;
+    bottom: 0;
+    height: 300px;
+    background: white;
+  }
+  @include media-md {
+    .bg,
+    .white-bg {
+      display: none;
+    }
+    h2 {
+      max-width: 314px;
+      line-height: 120% !important;
+    }
+    .rate-list {
+      margin-top: 60px;
+      display: block;
+      h4 {
+        font-size: 18px;
+        line-height:48px;
+      }
+      p {
+        font-size: 14px;
+        line-height: 22.4px;
+        padding: 23px 19px 22px 19px;
+      }
+    }
+    .btn-primary {
+      margin-top: 18px;
+    }
+  }
+}

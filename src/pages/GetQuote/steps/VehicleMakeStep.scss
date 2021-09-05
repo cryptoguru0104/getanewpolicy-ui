@@ -1,0 +1,66 @@
+@import 'scss/basic';
+@import 'scss/mixin/media';
+
+.step-vehicle {
+  .vehicle-list {
+    margin-bottom: 72px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(5, 173px);
+    column-gap: 21px;
+    row-gap: 11px;
+    li {
+      @extend .d-flex-center;
+      flex-direction: column;
+      padding: 9px 0;
+      justify-content: space-between;
+      height: 87px;
+      border: 1px solid #247fe8;
+      cursor: pointer;
+      box-shadow: 0px 3.41321px 10.2396px -4.26651px rgba(0, 0, 0, 0.17);
+      @include hover-effect;
+    }
+    .logo-container {
+      min-height: 40px;
+      display: flex;
+      align-items: flex-end;
+    }
+    .vehicle-name {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16px;
+      text-transform: uppercase;
+      color: #000;
+    }
+  }
+}
+
+@include media-md {
+  .step-vehicle {
+    .vehicle-list {
+      column-gap: 3px;
+      row-gap: 2px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      li {
+        height: 54px;
+        img {
+          max-height: 22px;
+        }
+      }
+      .logo-container {
+        min-height: 25px;
+      }
+      .vehicle-name {
+        font-size: 12px;
+        line-height: 14px;
+      }
+    }
+    .Dropdown-root {
+      width: 100%;
+    }
+    .btn {
+      width: 100%;
+    }
+  }
+}

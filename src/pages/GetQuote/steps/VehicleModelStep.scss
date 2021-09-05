@@ -1,0 +1,33 @@
+@import 'scss/basic';
+@import 'scss/mixin/media';
+
+.step-vehiclemodel {
+  .model-list {
+    margin-bottom: 17px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(3, 214px);
+    column-gap: 21px;
+    row-gap: 13px;
+    button {
+      height: 67px;
+    }
+  }
+}
+
+@include media-md {
+  .step-vehiclemodel {
+    .model-list {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      column-gap: 10px;
+      row-gap: 10px;
+      .btn {
+        width: 100%;
+        height: 50px;
+        padding: 5px;
+        word-break: break-all;
+      }
+    }
+  }
+}

@@ -1,0 +1,69 @@
+@import 'scss/mixin/media';
+.form {
+  margin-top: 47px;
+  display: inline-flex;
+  max-width: 370px;
+  box-sizing: border-box;
+  border-radius: 11px 11px 11px 11px;
+  box-shadow: 0px 1px 1px rgba(255, 255, 255, 0.25),
+    0px 10px 11px -6px rgba(18, 76, 163, 0.54);
+  @include media-md {
+    margin-top: 24px;
+  }
+}
+.form :global {
+  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #A4A4A4;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #A4A4A4;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: #A4A4A4;
+  }
+
+  .control {
+    width: auto;
+    flex: 1;
+    input {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      font-size: 20px;
+      height: 72px;
+      border: 2px solid #335ee0;
+      box-sizing: border-box;
+      border-radius: 11px 0 0 11px;
+      background-color: white !important;
+      background-image: url('../../icons/location.svg');
+      background-repeat: no-repeat;
+      background-position: left 30px center;
+    }
+  }
+  button {
+    width: 50%;
+    height: 72px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 112%;
+    color: white;
+    background: #335ee0;
+    border: 2px solid #335ee0;
+    box-sizing: border-box;
+    border-radius: 0px 11px 11px 0px;
+  }
+  @include media-md {
+    .control input {
+      height: 63px;
+      font-size: 16px;
+      background-position: left 20px center;
+    }
+    button {
+      height: 63px;
+      font-size: 16px;
+      line-height: 112%;
+    }
+  }
+}
